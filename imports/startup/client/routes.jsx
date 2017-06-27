@@ -1,19 +1,18 @@
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import { Router, Route, IndexRedirect, browserHistory } from 'react-router';
-import ThirdPage from '/imports/ui/pages/ThirdPage.jsx'
 import MainLayout from '/imports/ui/layouts/MainLayout.jsx';
 import HomeContainer from '/imports/ui/containers/HomeContainer.jsx';
-import SecondPage from '/imports/ui/pages/SecondPage.jsx';
-
+import ProductContainer from '/imports/ui/containers/ProductContainer.jsx';
+import ProductEditContainer from '/imports/ui/containers/ProductEditContainer.jsx';
 
 //we're using react router
 export default () => (
   <Router history={browserHistory}>
     <Route component={MainLayout}>
       <Route path="/" component={HomeContainer} />
-      <Route path="/cali_yogo-strawberry" component={SecondPage} />
-      <Route path="/page3" component={ThirdPage} />
+      <Route path="/product/:id" component={ProductContainer} />
+      <Route path="/edit/:id" component={ProductEditContainer} />
     </Route>
   </Router>
 );
