@@ -45,7 +45,7 @@ export default class ProductEdit extends Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="inputDescription" className="col-sm-2 control-label">Description</label>
+            <label htmlFor="inputDescription" className="col-sm-2 control-label">Volume</label>
             <div className="col-sm-10">
               <input ref="volume" type="text" className="form-control" id="inputVolume" placeholder="Product Volume" defaultValue={product.volume}/>
             </div>

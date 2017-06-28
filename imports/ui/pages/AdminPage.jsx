@@ -1,5 +1,5 @@
 import React, {PropTypes, Component} from 'react';
-import ProductGrid from '/imports/ui/components/Products/ProductGrid.jsx';
+import ProductGrid from '/imports/ui/components/Products/ProductAdminGrid.jsx';
 
 export default class HomePage extends Component {
     render() {
