@@ -4,8 +4,11 @@ export default class DeleteButton extends Component {
 
   render() {
     let productID = this.props.productID;
+
     let deleteProduct = () => {
+      console.log('productID',productID);
       Meteor.call("deleteproduct", productID, function(error, result) {
+
         if(result === 'success'){
                 console.warn("successful");
         }
