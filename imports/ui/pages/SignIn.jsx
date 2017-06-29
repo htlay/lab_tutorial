@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { browserHistory } from 'react-router';
+
 export default class SignIn extends Component {
+
   render() {
     let submitSignIn = () => {
       const password = this.refs.password.value.trim();
