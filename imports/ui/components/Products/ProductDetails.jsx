@@ -46,7 +46,7 @@ export default class ProductDetails extends Component {
       });
       let starTotal = this.state.totalStars + val;
 
-      let reviewCount = reviews.length+1;
+      let reviewsCount = reviews.length+1;
       if(reviews.length > 0){
         reviewsCount = reviews.length;
       }
