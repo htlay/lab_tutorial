@@ -6,11 +6,11 @@ export default class ProductPage extends Component {
         if (this.props.loading) {
             return <div>loading...</div>;
         } else {
-          let product = this.props.product;
+
             return (
                 <div>
                     <div className="container">
-                        <ProductDetails product={product}/>
+                        <ProductDetails {...this.props}/>
                     </div>
                 </div>
             )

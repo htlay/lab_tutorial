@@ -9,14 +9,14 @@ export default class ProductInsert extends Component {
       let name = this.refs.name.value.trim();
       let photo = this.refs.photo.value.trim();
       let price = this.refs.price.value;
-      let description = this.refs.description.value.trim();
+      let Flavor = this.refs.Flavor.value.trim();
       let volume = this.refs.volume.value.trim();
 
     let product = {
       name: name,
       image: photo,
       price: price,
-      description: description,
+      Flavor: Flavor,
       volume: volume
     }
 
@@ -26,7 +26,7 @@ export default class ProductInsert extends Component {
 
               this.refs.name.value ="";
               this.refs.photo.value ="";
-              this.refs.description.value ="";
+              this.refs.Flavor.value ="";
               this.refs.volume.value ="";
               this.refs.price.value ="";
       }
@@ -60,9 +60,9 @@ export default class ProductInsert extends Component {
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="inputDescription" className="col-sm-2 control-label">Description</label>
+              <label htmlFor="inputFlavor" className="col-sm-2 control-label">Flavor</label>
               <div className="col-sm-10">
-                <input ref="description" type="text" className="form-control" id="inputDescription" placeholder="Product Description" />
+                <input ref="Flavor" type="text" className="form-control" id="inputFlavor" placeholder="Product Flavor" />
               </div>
             </div>
             <div className="form-group">
