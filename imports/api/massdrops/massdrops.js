@@ -175,12 +175,11 @@ MassDropSchema = new SimpleSchema({
     defaultValue: 0,
     optional: true
   },
-  cur_price : {
-    type: Number,
-    label: "current price",
-    decimal: true,
-    defaultValue: 0,
-    optional: true
+  cur_tier : {
+    type: Object,
+    label: "current tier",
+    optional: true,
+    blackbox: true
   },
   tiers: {
     type: TiersSchema,

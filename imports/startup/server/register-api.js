@@ -11,3 +11,4 @@ import '/imports/api/reviews/server/publications/product_reviews.js';
 import '/imports/api/massdrops/massdrops.js';
 import '/imports/api/droporders/droporders.js';
 import '/imports/api/massdrops/server/publication/list_drops.js';
+import '/imports/api/massdrops/server/methods/add_participants.js';
