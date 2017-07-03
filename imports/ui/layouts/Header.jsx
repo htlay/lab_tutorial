@@ -16,11 +16,12 @@ export default class Header extends Component {
         <div className="col-sm-8">
           <ul className="nav nav-tabs">
             <li  className="active red"><Link to="/" className = "red">Home</Link></li>
+            <li ><Link to="/drops">MassDrops</Link></li>
             <li ><Link to="/signup">SignUp</Link></li>
             <li ><Link to="/signin">SignIn</Link></li>
         </ul>
       </div>
-      
+
       <div className="col-sm-4" style={{textAlign: 'right'}}>
         {isLoggedIn ?
            <span>{currentUser.profile.name}<button onClick={logOut} className="btn btn-danger">Logout</button></span>

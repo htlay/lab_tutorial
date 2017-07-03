@@ -8,3 +8,6 @@ import '/imports/api/products/server/methods/delete_product.js';
 import '/imports/api/reviews/reviews.js';
 import '/imports/api/reviews/server/methods/insert_review.js';
 import '/imports/api/reviews/server/publications/product_reviews.js';
+import '/imports/api/massdrops/massdrops.js';
+import '/imports/api/droporders/droporders.js';
+import '/imports/api/massdrops/server/publication/list_drops.js';
