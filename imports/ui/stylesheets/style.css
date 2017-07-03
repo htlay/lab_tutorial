@@ -9,3 +9,7 @@
     height:auto;
     display:inline-block;
 }
+.lineBreak{
+  border-style: solid;
+  border-color: #000;
+}
