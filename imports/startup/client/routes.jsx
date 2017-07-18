@@ -11,6 +11,8 @@ import SignIn from '/imports/ui/pages/SignIn.jsx';
 import LoginSignup from '/imports/ui/pages/LoginSignup.jsx';
 import DropsContainer from '/imports/ui/containers/DropsContainer.jsx';
 import OneDropContainer from '/imports/ui/containers/OneDropContainer.jsx';
+import Blog from '/imports/ui/pages/BlogPage.jsx';
+
 
 //we're using react router
 export default () => (
@@ -25,6 +27,8 @@ export default () => (
       <Route path="/signup" component={SignUp} />
       <Route path="/signin" component={SignIn} />
       <Route path="/login" component={LoginSignup} />
+      <Route path="/blog" component={Blog} />
+
     </Route>
   </Router>
 );
