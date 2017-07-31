@@ -26,7 +26,7 @@ class Header extends Component {
             <li ><Link to="/drops">Mass Drops</Link></li>
             <li ><Link to="/signup">SignUp</Link></li>
             <li ><Link to="/signin">SignIn</Link></li>
-            <li ><Link to="/blog">Blog</Link></li>
+            <li ><Link to="/blogs">Blog</Link></li>
           </ul>
         </div>
         <div className="col-sm-4" style={{textAlign: 'right'}}>
@@ -37,6 +37,7 @@ class Header extends Component {
             <span>{currentUser.profile.name} <button onClick={logOut} className="btn btn-danger">Logout</button></span>
           : <Link to="/signin" className="btn btn-success">Login</Link>
           }
+          <h5><Link to = "/blogList">BlogList</Link></h5>
         </div>
       </div>
     )

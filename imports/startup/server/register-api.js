@@ -15,3 +15,8 @@ import '/imports/api/massdrops/server/publications/list_drops.js';
 import '/imports/api/massdrops/server/publications/one_drops.js';
 
 import '/imports/api/massdrops/server/methods/add_participants.js';
+
+import '/imports/api/blogs/server/methods/insert_blog.js';
+import '/imports/api/blogs/blogs.js';
+import '/imports/api/blogs/server/publications/list_blog.js';
+import '/imports/api/blogs/server/publications/one_blog.js';
