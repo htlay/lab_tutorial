@@ -9,7 +9,7 @@ class Header extends Component {
     let logOut = () => {
       Meteor.logout(function(error, result){});
     }
-    console.warn('catalogType ', catalogType);
+    //console.warn('catalogType ', catalogType);
     let changePrice = () => {
       if(catalogType === 'retail'){
         dispatch(setCatalogType('wholesale'));
@@ -27,6 +27,13 @@ class Header extends Component {
             <li ><Link to="/signup">SignUp</Link></li>
             <li ><Link to="/signin">SignIn</Link></li>
             <li ><Link to="/blogs">Blog</Link></li>
+            {/* <li ><Link to="/favorite">Favorite</Link></li> */}
+            <li>
+            {isLoggedIn ?
+            <Link to={"/favorite/"+currentUser.profile.name}>Favorite</Link>
+            : <Link to="/signin">Favorite</Link>
+            }
+          </li>
           </ul>
         </div>
         <div className="col-sm-4" style={{textAlign: 'right'}}>

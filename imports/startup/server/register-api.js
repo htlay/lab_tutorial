@@ -20,3 +20,8 @@ import '/imports/api/blogs/server/methods/insert_blog.js';
 import '/imports/api/blogs/blogs.js';
 import '/imports/api/blogs/server/publications/list_blog.js';
 import '/imports/api/blogs/server/publications/one_blog.js';
+
+//wishList
+import '/imports/api/favoriteProducts/server/publications/list_favorite.js';
+import '/imports/api/favoriteProducts/favoriteProducts.js';
+import '/imports/api/favoriteProducts/server/methods/insert_favorite.js';

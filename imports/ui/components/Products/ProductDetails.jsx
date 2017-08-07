@@ -3,6 +3,8 @@ import accounting from 'accounting';
 import StarRating from 'star-rating-react';
 import AddReview from '../Reviews/AddReview.jsx';
 import ProductReviews from '../Reviews/ProductReviews.jsx';
+import AddFavorite from '../Favorite/AddFavorite.jsx';
+import {Link} from 'react-router';
 
 export default class ProductDetails extends Component {
   render() {
@@ -32,6 +34,11 @@ export default class ProductDetails extends Component {
             </p>
             <h2 className="text-center">{accounting.formatMoney(product.price)}</h2>
             <button className="btn btn-primary">Add To Cart</button>
+            &nbsp;
+            <Link to={"/favorite"}>
+              <button className="btn btn-primary">Add to WishList</button>
+            </Link>
+            <AddFavorite product={product} />
           </div>
         </div>
           <div className = "text-center" >

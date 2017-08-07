@@ -14,8 +14,10 @@ import OneDropContainer from '/imports/ui/containers/OneDropContainer.jsx';
 import BlogWritePage from '/imports/ui/pages/BlogPage.jsx';
 import BlogsContainer from '/imports/ui/containers/BlogsContainer.jsx';
 import OneBlogContainer from '/imports/ui/containers/OneBlogContainer.jsx';
+import AdminContainer from '/imports/ui/containers/AdminContainer.jsx';
+import FavoriteContainer from '/imports/ui/containers/FavoriteContainer.jsx';
+import ViewFavoriteContainer from '/imports/ui/containers/viewFavoriteContainer.jsx';
 
-//we're using react router
 export default () => (
   <Router history={browserHistory}>
     <Route component={MainContainer}>
@@ -31,7 +33,9 @@ export default () => (
       <Route path="/blogs" component={BlogWritePage} />
       <Route path="/blogs/:blog_id" component={OneBlogContainer} />
       <Route path="/bloglist" component={BlogsContainer} />
-
+      <Route path="/admin" component={AdminContainer}/>
+      <Route path="/favorite/:user_id" component={FavoriteContainer}/>
+      <Route path="/favorite/view/:user_id" component={ViewFavoriteContainer} />
 
     </Route>
   </Router>
