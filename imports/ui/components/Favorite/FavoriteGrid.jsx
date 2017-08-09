@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
+import RemoveFavorite from '/imports/ui/components/Favorite/RemoveFavorite.jsx';
 export default class FavortieGrid extends Component {
 
   render() {
@@ -13,6 +14,9 @@ export default class FavortieGrid extends Component {
           <Link to={'/product/' + product._id}>
             <button className="btn btn-primary text-center"> Buy Now </button>
           </Link>
+          <div>
+            <RemoveFavorite product= {product}/>
+          </div>
         </div>
       </div>
     )

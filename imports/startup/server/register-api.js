@@ -25,3 +25,4 @@ import '/imports/api/blogs/server/publications/one_blog.js';
 import '/imports/api/favoriteProducts/server/publications/list_favorite.js';
 import '/imports/api/favoriteProducts/favoriteProducts.js';
 import '/imports/api/favoriteProducts/server/methods/insert_favorite.js';
+import '/imports/api/favoriteProducts/server/methods/remove_favorite.js';
