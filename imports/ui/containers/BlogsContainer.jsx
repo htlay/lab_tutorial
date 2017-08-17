@@ -4,16 +4,13 @@ import BlogsListPage from '/imports/ui/pages/BlogsListPage.jsx';
 import {Blogs} from '/imports/api/blogs/blogs.js';
 
 export default createContainer((props) => {
-  const blogSub = Meteor.subscribe('list_blog');
+  const id = props.params.id;
+  const blogSub = Meteor.subscribe('list_blogs');
+
   let selector = {};
-
   const blogs = Blogs.find(selector).fetch();
-  //console.warn('blog ', blogs);
-
-
-  return {
-    blogs: blogs,
-    loading: !blogSub.ready()
-  };
-
+    return {
+      blogs: blogs,
+      loading: !blogSub.ready()
+    };
 }, BlogsListPage);

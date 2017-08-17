@@ -3,11 +3,11 @@ import { Mongo } from 'meteor/mongo';
 import { Products } from '/imports/api/products/products.js';
 
 Meteor.methods({
-      insertProduct: function(product) {
-      console.warn('product ', product);
+    insertProduct: function(product) {
+    product.user_id = this.userId;
+    
+    let productId = Products.insert(product);
 
-      product.user_id = this.userId;
-      let productId = Products.insert(product);
 
     if(productId) {
         return "success";

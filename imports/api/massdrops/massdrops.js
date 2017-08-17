@@ -2,6 +2,7 @@ import {Meteor} from 'meteor/meteor';
 import {Mongo} from 'meteor/mongo';
 
 export const MassDrops = new Mongo.Collection("mass_drops");
+
 OrdersSchema = new SimpleSchema({
   id : {
     type: String,
@@ -37,7 +38,6 @@ OrdersSchema = new SimpleSchema({
       else return this.unset();
     }
   }
-
 });
 
 TiersSchema = new SimpleSchema({
@@ -181,6 +181,7 @@ MassDropSchema = new SimpleSchema({
     optional: true,
     blackbox: true
   },
+
   tiers: {
     type: TiersSchema,
     label: "tiers"
@@ -222,7 +223,6 @@ MassDropSchema = new SimpleSchema({
   },
 
 });
-
 
 
 MassDrops.attachSchema(MassDropSchema);

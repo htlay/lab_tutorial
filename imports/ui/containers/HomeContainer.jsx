@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 import { connect }  from 'react-redux';
-import HomePage from '/imports/ui/pages/HomePage.jsx';
+import Homepage from '/imports/ui/pages/Homepage.jsx';
 import {Products} from '/imports/api/products/products.js';
 
 const HomeContainer = createContainer(({catalogType}) => {
@@ -16,7 +16,7 @@ const HomeContainer = createContainer(({catalogType}) => {
     loading: !productSub.ready()
   };
 
-}, HomePage);
+}, Homepage);
 
 function mapStateToProps(state) {
   return {

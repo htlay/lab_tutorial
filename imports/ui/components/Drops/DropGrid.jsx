@@ -1,37 +1,40 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 export default class DropGrid extends Component {
+
   render() {
-    //find out current tier
+    //find our current tier
     //get needed participants from tier participants - current participants
     //display needed participants and next tier price
     let product = this.props.product;
     let curTier = product.cur_tier;
-    let curParticipants = product.participants;
+    let curParticipants = product.participants
     let tiers = product.tiers;
     let nextTier = null;
-    let needParticipants = 0;
+    let neededParticipants = 0;
     let nextPrice = null;
-    if(curTier.id < tiers.length-1){
-      nextTier = tiers[curTier.id+1];
-      needParticipants = nextTier.participants - product.participants;
+    if (curTier.id < tiers.length - 1){
+      nextTier = tiers[curTier.id + 1];
+      neededParticipants = nextTier.participants - product.participants;
       nextPrice = nextTier.price;
     }
-    let addParticipant = () => {
-      Meteor.call("addParticipant", product._id);
+    let addParticipants = () => {
+      Meteor.call("addParticipants", product._id);
     }
     return (
-      <div className="col-sm-4">
+      <div className="col-sm-3">
         <img className="img-responsive"   src={product.images[0]}/>
-        <h2 className="text-center"> {product.name_name}  </h2>
+        <h2 className="text-center"> {product.product_name}  </h2>
         <div className="text-center">
-          {product.cur_tier.price < product.org_price ? <span><s>${product.org_price}</s><span>  ${product.cur_tier.price}</span></span>
-          :<span > ${product.org_price} </span> }
-          <div>{nextTier ? <span>{needParticipants} more people needed for this price ${nextPrice}</span>
-          : <span></span>}</div>
-          <Link to={'/drop/' + product.product_id}>
-            <button className="btn btn-primary text-center">View Drop</button>
-          </Link>
+          {product.cur_tier.price < product.org_price ? <span><s>${product.org_price}</s><span> ${product.cur_tier.price}</span></span>
+                    :<span > ${product.org_price} </span> }
+          <div>
+            {nextTier ? <span> {neededParticipants} more people needed for ${nextPrice}
+             </span>
+            : <span> </span>}</div>
+           <Link to={'/drop/' + product.product_id}>
+            <button className="btn btn-primary text-center"> View Drop </button>
+           </Link>
         </div>
       </div>
     )

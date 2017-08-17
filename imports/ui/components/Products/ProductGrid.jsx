@@ -1,26 +1,21 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-
-
 export default class ProductGrid extends Component {
 
   render() {
-    let {product,catalogType} = this.props;
-    console.log('prop', product)
+    let {product, catalogType} = this.props;
     return (
-
       <div className="col-sm-4">
-        <img className="img-responsive" src={product.image} />
-        <h2 className="text-center">{product.name}</h2>
+        <img className="img-responsive"   src={product.image}/>
+        <h2 className="text-center"> {product.name}  </h2>
         <div className="text-center">
-          {catalogType == 'retail' ? product.price : product.wholesale_price}
-        {/* {{<h2>  <span> ${product.price} </span> </h2>}} */}
-          <Link to={'/product/' + product._id}>
-            <button className="btn btn-primary">Buy Now</button>
-          </Link>
-      </div>
-      </div>
 
+          <h2> <span> ${catalogType === 'retail' ? product.price :  product.wholesale_price} </span> </h2>
+          <Link to={'/product/' + product._id}>
+            <button className="btn btn-primary text-center"> Buy Now </button>
+          </Link>
+        </div>
+      </div>
     )
   }
 }

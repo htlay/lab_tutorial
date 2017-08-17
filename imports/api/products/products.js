@@ -2,7 +2,6 @@ import {Meteor} from 'meteor/meteor';
 import {Mongo} from 'meteor/mongo';
 
 export const Products = new Mongo.Collection("products");
-
 ProductSchema = new SimpleSchema({
   created_at: {
     type: Date,
@@ -30,48 +29,42 @@ ProductSchema = new SimpleSchema({
     label: "product name",
     max: 128
   },
-
   description: {
     type: String,
-    label: "description",
-    optional: true
-
-  },
-
-  price: {
-    type: Number,
-    label: "pricing",
-    decimal: true,
-    defaultValue: 0,
+    label: "product description",
+    max: 128,
     optional: true
   },
-  
-  wholesale_price: {
-    type: Number,
-    label: "pricing",
-    decimal: true,
-    defaultValue: 0,
-    optional: true
-  },
-
-  flavors: {
-    type: [String],
-    label: "flavors",
-    optional: true
-  },
-
   image: {
     type: String,
-    label: "product image"
+    label: "product image link",
+    max: 128
   },
-
-  volume: {
-    type: String,
-    label: "volume",
+  price: {
+    type: Number,
+    label: "product price",
+    max: 128,
+    decimal: true,
+    defaultValue: 0,
     optional: true
   },
-
-
+  wholesale_price: {
+    type: Number,
+    label: "wholesale price",
+    decimal: true,
+    defaultValue: 0,
+    optional: true
+  },
+  flavors: {
+    type: [String],
+    label: "product flavors",
+    optional: true
+  },
+  volume: {
+    type: String,
+    label: "product volume",
+    optional: true
+  },
   user_id: {
     type: String,
     label: "user_id",
@@ -79,5 +72,6 @@ ProductSchema = new SimpleSchema({
   }
 
 });
+
 
 Products.attachSchema(ProductSchema);

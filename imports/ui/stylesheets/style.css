@@ -1,99 +1,274 @@
 .red {
   color: red;
 }
-.lead {
-  color: green;
-}
-.divider{
-    width:10px;
-    height:auto;
-    display:inline-block;
-}
-.lineBreak{
-  border-style: solid;
-  border-color: #000;
+#blue {
+  color: #527fcb;
 }
 
-.btn-circle.btn-xl {
+/**
+ * General Margins to user across the app
+ */
+.m-5 { margin: 5px;       }
+.mt-5{ margin-top:   5px; }
+.mr-5{ margin-right: 5px; }
+.mb-5{ margin-bottom: 5px;}
+.ml-5{ margin-left: 5px;}
+
+.m-10 { margin: 10px;       }
+.mt-10{ margin-top:   10px; }
+.mr-10{ margin-right: 10px; }
+.mb-10{ margin-bottom: 10px;}
+.ml-10{ margin-left: 10px;}
+
+.m-15 { margin: 15px;       }
+.mt-15{ margin-top:   15px; }
+.mr-15{ margin-right: 15px; }
+.mb-15{ margin-bottom: 15px;}
+.ml-15{ margin-left: 15px;}
+
+.m-20 { margin: 20px;       }
+.mt-20{ margin-top:   20px; }
+.mr-20{ margin-right: 20px; }
+.mb-20{ margin-bottom: 20px;}
+.ml-20{ margin-left: 20px;}
+
+.m-25 { margin: 25px;       }
+.mt-25{ margin-top:   25px; }
+.mr-25{ margin-right: 25px; }
+.mb-25{ margin-bottom: 25px;}
+.ml-25{ margin-left: 25px;}
+
+.m-30 { margin: 30px;       }
+.mt-30{ margin-top:   30px; }
+.mr-30{ margin-right: 30px; }
+.mb-30{ margin-bottom: 30px;}
+.ml-30{ margin-left: 30px;}
+
+.m-35 { margin: 35px;       }
+.mt-35{ margin-top:   35px; }
+.mr-35{ margin-right: 35px; }
+.mb-35{ margin-bottom: 35px;}
+.ml-35{ margin-left: 35px;}
+
+.m-40 { margin: 40px;       }
+.mt-40{ margin-top:   40px; }
+.mr-40{ margin-right: 40px; }
+.mb-40{ margin-bottom: 40px;}
+.ml-40{ margin-left: 40px;}
+
+.m-45 { margin: 45px;       }
+.mt-45{ margin-top:   45px; }
+.mr-45{ margin-right: 45px; }
+.mb-45{ margin-bottom: 45px;}
+.ml-45{ margin-left: 45px;}
+
+.m-50 { margin: 50px;       }
+.mt-50{ margin-top:   50px; }
+.mr-50{ margin-right: 50px; }
+.mb-50{ margin-bottom: 50px;}
+.ml-50{ margin-left: 50px;}
+
+.m-200 { margin: 200px;       }
+.mt-200{ margin-top:   200px; }
+.mr-200{ margin-right: 200px; }
+.mb-200{ margin-bottom: 200px;}
+.ml-200{ margin-left: 200px;}
+
+/**
+ * General paddings to use across the app
+ */
+.p-5 { padding: 5px;       }
+.pt-5{ padding-top:   5px; }
+.pr-5{ padding-right: 5px; }
+.pb-5{ padding-bottom: 5px;}
+.pl-5{ padding-left: 5px;}
+
+.p-10 { padding: 10px;       }
+.pt-10{ padding-top:   10px; }
+.pr-10{ padding-right: 10px; }
+.pb-10{ padding-bottom: 10px;}
+.pl-10{ padding-left: 10px;}
+
+.p-15 { padding: 15px;       }
+.pt-15{ padding-top:   15px; }
+.pr-15{ padding-right: 15px; }
+.pb-15{ padding-bottom: 15px;}
+.pl-15{ padding-left: 15px;}
+
+.p-20 { padding: 20px;       }
+.pt-20{ padding-top:   20px; }
+.pr-20{ padding-right: 20px; }
+.pb-20{ padding-bottom: 20px;}
+.pl-20{ padding-left: 20px;}
+
+.p-25 { padding: 25px;       }
+.pt-25{ padding-top:   25px; }
+.pr-25{ padding-right: 25px; }
+.pb-25{ padding-bottom: 25px;}
+.pl-25{ padding-left: 25px;}
+
+.p-30 { padding: 30px;       }
+.pt-30{ padding-top:   30px; }
+.pr-30{ padding-right: 30px; }
+.pb-30{ padding-bottom: 30px;}
+.pl-30{ padding-left: 30px;}
+
+.p-35 { padding: 35px;       }
+.pt-35{ padding-top:   35px; }
+.pr-35{ padding-right: 35px; }
+.pb-35{ padding-bottom: 35px;}
+.pl-35{ padding-left: 35px;}
+
+.p-40 { padding: 40px;       }
+.pt-40{ padding-top:   40px; }
+.pr-40{ padding-right: 40px; }
+.pb-40{ padding-bottom: 40px;}
+.pl-40{ padding-left: 40px;}
+
+.p-45 { padding: 45px;       }
+.pt-45{ padding-top:   45px; }
+.pr-45{ padding-right: 45px; }
+.pb-45{ padding-bottom: 45px;}
+.pl-45{ padding-left: 45px;}
+
+.p-50 { padding: 50px;       }
+.pt-50{ padding-top:   50px; }
+.pr-50{ padding-right: 50px; }
+.pb-50{ padding-bottom: 50px;}
+.pl-50{ padding-left: 50px;}
+
+/*Stars Support*/
+.animated {
+   -webkit-transition: height 0.2s;
+   -moz-transition: height 0.2s;
+   transition: height 0.2s;
+}
+
+.stars
+{
+    margin: 20px 0;
+    font-size: 24px;
+    color: #d17581;
+}
+
+
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+.lineBreak {
+  border-style: solid;
+  border-color: black;
+}
+
+.btn-circle.btn-xl  {
   width: 79px;
   height: 79px;
   text-align: center;
-  padding: 10px 0px;
+  padding: 13px 0;
   font-size: 16px;
   border-radius: 70px;
 }
 
-.need{
+.needed{
   font-size: 10px;
 }
+.quantity-input{
+  margin-top: 5px;
+  margin-left: 33px;
+}
+.circle {
+	background: white;
+	border-radius:50%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #5cb85c;
+	color: black;
+	display:table;
+	font-weight: bold;
+	font-size: 1em;
+	width: auto;
+	margin:0 0;
+}
+.circle div{
 
-.RichEditor-root {
-  background: #fff;
-  border: 1px solid #ddd;
-  font-family: 'Georgia', serif;
-  font-size: 14px;
-  padding: 15px;
+	display:table-cell;
+	vertical-align:middle;
+	/*height:100px;
+	width:100px;*/
+	text-align:center;
+	padding: 0 15px;
 }
 
-.RichEditor-editor {
-  border-top: 1px solid #ddd;
-  cursor: text;
-  font-size: 16px;
-  margin-top: 10px;
+.progress-bar-col{
+  padding-left: 0px;
+  padding-right: 0px;
+  float:left;
 }
 
-.RichEditor-editor .public-DraftEditorPlaceholder-root,
-.RichEditor-editor .public-DraftEditor-content {
-  margin: 0 -15px -15px;
-  padding: 15px;
+.drop-progress-bar{
+  margin-top: 45px;
+  margin-right: -5px;
 }
 
-.RichEditor-editor .public-DraftEditor-content {
-  /*min-height: 100px;*/
-  max-height: 200px;
-  overflow: auto;
+.drop-circle{
+  width:106px;
+  margin-right: -5px;
+  position: relative;
+  z-index: 4000;
+}
+.progress-bar-row{
+  background-color: #f3f1f1;
+  padding: 30px;
+  border-radius: 5px;
 }
 
-.RichEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
-  display: none;
+.price{
+  display: block;
+  text-align: center;
 }
-
-.RichEditor-editor .RichEditor-blockquote {
-  border-left: 5px solid #eee;
-  color: #666;
-  font-family: 'Hoefler Text', 'Georgia', serif;
-  font-style: italic;
-  margin: 16px 0;
-  padding: 10px 20px;
+.needed{
+  display: block;
+  padding:0px;
 }
-
-.RichEditor-editor .public-DraftStyleDefault-pre {
-  background-color: rgba(0, 0, 0, 0.05);
-  font-family: 'Inconsolata', 'Menlo', 'Consolas', monospace;
-  font-size: 16px;
-  padding: 20px;
+.progress1{
+  height: 10px;
+  background-color: #ddd;
+  position: relative;
+  z-index: 100; 
 }
-
-.RichEditor-controls {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 14px;
-  margin-bottom: 5px;
-  user-select: none;
-}
-
-.RichEditor-styleButton {
-  color: #999;
-  cursor: pointer;
-  margin-right: 16px;
-  padding: 2px 0;
-  display: inline-block;
-}
-
-.RichEditor-activeButton {
-  color: #5890ff;
-}
-.container-root {
-  border: 1px solid black;
-  padding: 5px;
-  margin: 5px;
+.progress-bar-color{
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }

@@ -6,15 +6,16 @@ import setCatalogType from '/imports/ui/redux/actions/Catalog/setCatalogType.js'
 class Header extends Component {
   render() {
     let {currentUser, isLoggedIn, catalogType, dispatch} = this.props;
+    console.warn('currentUser:', currentUser);
     let logOut = () => {
       Meteor.logout(function(error, result){});
     }
-    //console.warn('catalogType ', catalogType);
+    console.warn('catalogType ', catalogType);
     let changePrice = () => {
-      if(catalogType === 'retail'){
+      if (catalogType === 'retail') {
         dispatch(setCatalogType('wholesale'));
       }
-      else{
+      else {
         dispatch(setCatalogType('retail'));
       }
     }
@@ -27,24 +28,23 @@ class Header extends Component {
             <li ><Link to="/signup">SignUp</Link></li>
             <li ><Link to="/signin">SignIn</Link></li>
             <li ><Link to="/blogs">Blog</Link></li>
-            {/* <li ><Link to="/favorite">Favorite</Link></li> */}
-            <li>
-            {isLoggedIn ?
-            <Link to={"/favorite/"+currentUser.profile.name}>Favorite</Link>
-            : <Link to="/signin">Favorite</Link>
-            }
-          </li>
+            <li ><Link to="/wishlist/view/andrewtek">View Sample Wishlist</Link></li>
+            <li ><Link to="/affiliate"> My Affiliates</Link></li>
+
+            {this.props.isLoggedIn ?
+                <li ><Link to={'/wishlist/' + currentUser.profile.username}>My Wishlist</Link></li>
+                :  <li ><Link to="/signin">My Wishlist</Link></li> }
+
           </ul>
         </div>
         <div className="col-sm-4" style={{textAlign: 'right'}}>
           <span style={{paddingRight: "20px"}}>
-            <button className="btn btn-default" onClick={changePrice}>{catalogType === 'retail' ? 'Get wholesale price':'Get Retail Price'}</button>
+            <button className="btn btn-default" onClick={changePrice}> {catalogType === 'retail' ? 'Get Wholesale Price' : 'Get Retail Price'}</button>
           </span>
           {isLoggedIn ?
             <span>{currentUser.profile.name} <button onClick={logOut} className="btn btn-danger">Logout</button></span>
           : <Link to="/signin" className="btn btn-success">Login</Link>
           }
-          <h5><Link to = "/blogList">BlogList</Link></h5>
         </div>
       </div>
     )

@@ -7,12 +7,10 @@ export default createContainer((props) => {
   let productId = props.params.product_id;
   const oneDropSub = Meteor.subscribe('one_drop', productId);
   let selector = {product_id: productId};
-
-  const product = MassDrops.findOne(selector);
-
+ const product = MassDrops.findOne(selector);
   return {
+    userLogin: !!Meteor.userId(),
     product: product,
     loading: !oneDropSub.ready()
   };
-
 }, OneDropPage);

@@ -4,6 +4,5 @@ import { Products } from '/imports/api/products/products.js';
 
 Meteor.publish("list_products", function () {
   let selector = {};
-  //console.warn('products ', Products.find(selector).fetch());
   return Products.find(selector);
 });

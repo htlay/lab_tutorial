@@ -1,32 +1,38 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-export default class BlogsListPage extends Component{
-  render(){
-    if(this.props.loading){
-      return <div>loading...</div>
 
-    }
-    else{
+export default class BlogsListPage extends Component {
+  render() {
+    if (this.props.loading) {
+      return <h1> loading... </h1>
+    } else {
       let blogs = this.props.blogs;
-      console.warn('blogsssss', blogs);
-      let BlogsList = blogs.map(function(blog){
+      let blogsList = blogs.map(function(blog,i) {
         return (
-          <Link to={'/blogs/' + blog._id}>
-            <h4 className="align-left">{blog.title}
-            </h4>
+          <div className="col-sm-3">
+          <Link key={i} to={'/blogs/' + blog._id}>
+            <h1>
+              {blog.title}
+              <br/>
+            </h1>
           </Link>
-        )
+        </div>)
       });
       return (
         <div>
-          <div className='container'>
-            {BlogsList}
+          <div className="pull-right">
+          <Link to={'/blog/write'}>
+            <span style={{paddingRight: "100px"}}> Write Blog </span>
+          </Link>
+          <br/>
+          <br/>
+          at
+        </div>
+          <div>
+            {blogsList}
           </div>
         </div>
       )
     }
-
-
   }
-
 }

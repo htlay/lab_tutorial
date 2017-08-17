@@ -30,20 +30,18 @@ ReviewSchema = new SimpleSchema({
     label: "product id",
     max: 128
   },
-
   review: {
     type: String,
     label: "review",
     optional: true
   },
-
   stars: {
     type: Number,
     label: "stars",
+    decimal: true,
     defaultValue: 5,
     optional: true
   },
-
   user_id: {
     type: String,
     label: "user_id",
@@ -51,5 +49,6 @@ ReviewSchema = new SimpleSchema({
   }
 
 });
+
 
 Reviews.attachSchema(ReviewSchema);
